@@ -15,6 +15,8 @@ struct PersistenceController {
     
     init() {
         container = NSPersistentContainer(name: "ShoppingListModel")
+        
+        
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
